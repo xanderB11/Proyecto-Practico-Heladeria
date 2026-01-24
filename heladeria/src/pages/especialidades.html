@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/helado.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo Completo | Heladería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-200 font-sans">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+            <a href="/index.html" class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
+            </a>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-bold flex flex-row space-x-12 text-xl">
+                    <li><a href="/index.html" class="text-pink-400 border-b-4  hover:text-pink-600">Inicio</a></li>
+                    <li><a href="/src/pages/especialidades.html" class="text-pink-400  border-blue-300">Nuestras
+                            Especialidades</a></li>
+                    <li><a href="/src/pages/contactanos.html" class="text-pink-400 hover:text-pink-600">Contáctanos</a></li>
+                    <li><a href="/src/pages/carrito.html" class="text-pink-400 hover:text-pink-600">Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="max-w-screen-xl mx-auto px-4 pt-32 text-center">
+        <h2 class="text-7xl font-black text-pink-600 uppercase italic mb-12 tracking-tighter">Especialidades</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <div class="flex flex-col">
+                <div
+                    class="bg-sky-400 rounded-[2.5rem] p-6 shadow-xl border-4 border-white aspect-square flex items-center justify-center z-10 -mb-16">
+                    <img src="https://i.postimg.cc/SxkWdy1T/cono_de_helado.png" alt="Conos"
+                        class="drop-shadow-2xl max-h-full object-contain rounded-xl">
+                </div>
+                <div class="bg-sky-400 rounded-[2.5rem] pt-20 p-8 text-white shadow-lg border-4 border-white flex-grow">
+                    <h2 class="text-3xl md:text-4xl font-black text-pink-600 uppercase italic tracking-tighter text-center mb-8">
+                        Conos</h2>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none">Cono Mix Simple</h3>
+                                <p class="text-sm font-medium mt-1">Un sabor de helado, crema y queso.</p>
+                            </div>
+                            <span class="text-2xl font-black text-pink-600">$1,50</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none">Cono Mix Doble</h3>
+                                <p class="text-sm font-medium mt-1">Dos sabores de helado, crema y queso.</p>
+                            </div>
+                            <span class="text-2xl font-black text-pink-600">$2,25</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none">Cono Gelato</h3>
+                                <p class="text-sm font-medium mt-1">Un sabor de helado.</p>
+                            </div>
+                            <span class="text-2xl font-black text-pink-600">$0,99</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none">Cono Gelato Doble</h3>
+                                <p class="text-sm font-medium mt-1">Dos sabores de helado.</p>
+                            </div>
+                            <span class="text-2xl font-black text-pink-600">$0,99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div
+                    class="bg-pink-500 rounded-[2.5rem] p-6 shadow-xl border-4 border-white aspect-square flex items-center justify-center z-10 -mb-16">
+                    <img src="https://i.postimg.cc/25YX4RnR/tulipan-helado.png" alt="Tulipán"
+                        class="drop-shadow-2xl max-h-full object-contain rounded-xl">
+                </div>
+                <div
+                    class="bg-pink-500 rounded-[2.5rem] pt-20 p-8 text-white shadow-lg border-4 border-white flex-grow">
+                    <h2 class="text-3xl md:text-4xl font-black text-sky-400 uppercase italic tracking-tighter text-center mb-8">
+                        Tulipanes</h2>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none text-sky-300">Tulipán Mix Simple
+                                </h3>
+                                <p class="text-sm font-medium mt-1">Un sabor de helado, crema y queso.</p>
+                            </div>
+                            <span class="text-2xl font-black text-white">$1,80</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none text-sky-300">Tulipán Mix Doble</h3>
+                                <p class="text-sm font-medium mt-1">Dos sabores de helado, crema y queso.</p>
+                            </div>
+                            <span class="text-2xl font-black text-white">$3,05</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none text-sky-300">Tulipán Mix Triple
+                                </h3>
+                                <p class="text-sm font-medium mt-1">Tres sabores de helado, crema y queso.</p>
+                            </div>
+                            <span class="text-2xl font-black text-white">$5,00</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none text-sky-300">Tulipán Gelato Doble
+                                </h3>
+                                <p class="text-sm font-medium mt-1">Dos sabores de helado.</p>
+                            </div>
+                            <span class="text-2xl font-black text-white">$2,22</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div
+                    class="bg-sky-400 rounded-[2.5rem] p-6 shadow-xl border-4 border-white aspect-square flex items-center justify-center z-10 -mb-16">
+                    <img src="https://i.postimg.cc/W1JWkpKR/fresas-y-crema.png" alt="Frutillas con crema"
+                        class="drop-shadow-2xl max-h-full object-contain rounded-xl">
+                </div>
+                <div class="bg-sky-400 rounded-[2.5rem] pt-20 p-8 text-white shadow-lg border-4 border-white flex-grow">
+                    <h2 class="text-3xl md:text-4xl font-black text-pink-600 uppercase italic tracking-tighter text-center mb-8">
+                        Frutillas Mix</h2>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none">Frutillas con Crema</h3>
+                                <p class="text-sm font-medium mt-1">Frutillas con crema y zarzamora.</p>
+                            </div>
+                            <span class="text-2xl font-black text-pink-600">$1,87</span>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none">Frutillas Mix</h3>
+                                <p class="text-sm font-medium mt-1">Frutillas, un sabor de helado, crema y queso.</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-2xl font-black text-pink-600">$3,50</span>
+                                
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none">Ensalada de Frutas</h3>
+                                <p class="text-sm font-medium mt-1">Banana, sandía, piña, papaya, dos sabores de helado,
+                                    crema y queso.</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-2xl font-black text-pink-600">$3,99</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--agrego de chips-->
+    </section>
+    <div class="mt-10">
+        <h3 class="text-3xl font-black text-pink-600 uppercase italic mb-6 tracking-tighter  text-center">Nuestros Sabores
+        </h3>
+        <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            <span
+                class="bg-white text-pink-500 border-2 border-pink-500 px-6 py-2 rounded-full font-bold shadow-xl hover:bg-amber-800 hover:text-white transition-colors cursor-default">
+                Chocolate
+            </span>
+            <span
+                class="bg-white text-pink-500 border-2 border-pink-500 px-6 py-2 rounded-full font-bold shadow-xl hover:bg-pink-500 hover:text-white transition-colors cursor-default">
+                Vainilla
+            </span>
+            <span
+                class="bg-white text-pink-500 border-2 border-pink-500 px-6 py-2 rounded-full font-bold shadow-xl hover:bg-red-500 hover:text-red-800 transition-colors cursor-default">
+                Frutilla 
+            </span>
+            <span
+                class="bg-white text-pink-500 border-2 border-pink-500 px-6 py-2 rounded-full font-bold shadow-xl hover:bg-amber-600 hover:text-white transition-colors cursor-default">
+                Dulce de Leche
+            </span>
+            <span
+                class="bg-white text-pink-500 border-2 border-pink-500 px-6 py-2 rounded-full font-bold shadow-xl hover:bg-green-400 hover:text-white transition-colors cursor-default">
+                Menta 
+            </span>
+            <span
+                class="bg-white text-pink-500 border-2 border-pink-500 px-6 py-2 rounded-full font-bold shadow-xl hover:bg-purple-600 hover:text-white transition-colors cursor-default">
+                Mora
+            </span>
+            <span
+                class="bg-white text-pink-500 border-2 border-pink-500 px-6 py-2 rounded-full font-bold shadow-sm hover:bg-blue-300 hover:text-white transition-colors cursor-default">
+                chicle
+            </span>
+        </div>
+    </div>
+
+    <!--parte final-->
+    <footer class="bg-[#e4314d] text-white py-12 px-6 mt-20">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-20 mb-4 bg-white rounded-full p-2"
+                    alt="Logo" />
+                <p class="text-sm opacity-90 max-w-xs text-center md:text-left">
+                    Somos la mayor cadena especializada en helados artesanales con la mejor calidad y sabor a nivel
+                    nacional.
+                </p>
+            </div>
+            <div class="flex flex-col items-center uppercase font-bold tracking-wider">
+                <h4 class="mb-4 text-xl border-b-2 border-white pb-1">Links</h4>
+                <ul class="space-y-3 text-center md:text-left">
+                    <li><a href="/index.html" class="hover:text-blue-200">Inicio</a></li>
+                    <li><a href="/src/pages/especialidades.html" class="hover:text-blue-200">Nuestras Especialidades</a></li>
+                    <li><a href="/src/pages/contactanos.html" class="hover:text-blue-200">Contáctanos</a></li>
+                    <li><a href="/src/pages/carrito.html" class="hover:text-blue-200">Carrito</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-start w-full">
+                <h4 class="mb-4 text-xl font-bold uppercase">Suscríbete</h4>
+                <form class="w-full max-w-xs space-y-3">
+                    <input type="email" placeholder="Correo electrónico"
+                        class="w-full px-4 py-2 rounded-md text-gray-800 focus:outline-none" />
+                    <button
+                        class="w-full bg-[#5bc0de] hover:bg-[#46a1b9] text-white font-bold py-2 px-4 rounded-md transition-colors">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-xs opacity-70 border-t border-white/20 pt-4">
+            © 2026 Heladería Deliciosa. Todos los derechos reservados.
+        </div>
+    </footer>
+</body>
+
+</html>

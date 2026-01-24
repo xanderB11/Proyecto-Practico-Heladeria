@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito | Heladería Deliciosa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-50 font-sans">
+
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+            <a href="/index.html" class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
+            </a>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-bold flex flex-row space-x-12 text-xl">
+                    <li><a href="/index.html" class="text-pink-400 hover:text-pink-600">Inicio</a></li>
+                    <li><a href="/src/pages/especialidades.html" class="text-pink-400 hover:text-pink-600">Nuestras Especialidades</a></li>
+                    <li><a href="/src/pages/contactanos.html" class="text-pink-400 border-b-4 border-blue-300">Contáctanos</a></li>
+                    <li><a href="/src/pages/carrito.html" class="text-pink-400 border-b-4 hover:text-pink-600">Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="h-24"></div>
+
+    <main class="max-w-6xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+        
+        <section class="md:col-span-2">
+            <h2 class="text-3xl font-black text-pink-600 mb-8 uppercase tracking-wider text-center md:text-left">
+                Catálogo de Especialidades
+            </h2>
+            <div id="catalogo" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+        </section>
+
+        <aside class="relative">
+            <div class="sticky top-28 bg-white rounded-3xl shadow-2xl p-6 border-t-8 border-pink-400">
+                <h2 class="text-2xl font-black text-pink-600 mb-6 flex items-center gap-2">
+                    🛒 Mi Pedido
+                </h2>
+
+                <ul id="lista-carrito" class="space-y-4 mb-6 max-h-[400px] overflow-y-auto pr-2">
+                    </ul>
+
+                <div class="border-t-2 border-dashed border-gray-200 pt-4 mb-6">
+                    <div class="flex justify-between items-center font-black text-xl text-gray-800">
+                        <span>TOTAL:</span>
+                        <span id="total" class="text-pink-600">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    
+                    <button onclick="vaciarCarrito()" class="w-full text-red-500 hover:text-red-700 font-bold py-2 transition-colors">
+                        Vaciar el carrito
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="text-white py-12 px-6 mt-20 bg-pink-600">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-20 mb-4 bg-white rounded-full p-2" alt="Logo" />
+                <p class="text-sm opacity-90 max-w-xs text-center md:text-left">
+                    Somos la mayor cadena especializada en helados artesanales con la mejor calidad y sabor a nivel nacional.
+                </p>
+            </div>
+            <div class="flex flex-col items-center uppercase font-bold tracking-wider">
+                <h4 class="mb-4 text-xl border-b-2 border-white pb-1">Links</h4>
+                <ul class="space-y-3 text-center md:text-left">
+                    <li><a href="/index.html" class="hover:text-blue-200">Inicio</a></li>
+                    <li><a href="/src/pages/especialidades.html" class="hover:text-blue-200">Nuestras Especialidades</a></li>
+                    <li><a href="/src/pages/contactanos.html" class="hover:text-blue-200">Contáctanos</a></li>
+                    <li><a href="/src/pages/carrito.html" class="hover:text-blue-200">Carrito</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-start w-full">
+                <h4 class="mb-4 text-xl font-bold uppercase">Suscríbete</h4>
+                <form class="w-full max-w-xs space-y-3">
+                    <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-2 rounded-md text-gray-800 focus:outline-none" />
+                    <button class="w-full bg-[#5bc0de] hover:bg-[#46a1b9] text-white font-bold py-2 px-4 rounded-md transition-colors">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-xs opacity-70 border-t border-white/20 pt-4">
+            © 2026 Heladería Deliciosa. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/carrito.js"></script>
+</body>
+</html>

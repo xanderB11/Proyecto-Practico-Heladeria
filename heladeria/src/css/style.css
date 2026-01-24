@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definición de los colores principales de Heladería Deliciosa */
+:root {
+    /* Colores de Identidad */
+    --color-principal-rosa: #db2777;
+    /* El rosa de tus títulos y botones */
+    --color-principal-azul: #38bdf8;
+    /* El azul de tus tarjetas y detalles */
+    --color-fondo-sitio: #bfdbfe;
+    /* El azul claro del fondo (bg-blue-200) */
+    --color-footer-rojo: #e4314d;
+    /* El rojo de tu sección final */
+
+    /* Colores de Sabores (para mantenimiento fácil) */
+    --sabor-chocolate: #92400e;
+    --sabor-menta: #4ade80;
+    --sabor-frutilla: #ef4444;
+    --sabor-vainilla: #f59e0b;
+    --sabor-mora: #9333ea;
+    --sabor-chicle: #93c5fd;
+}
+
+/* Ejemplo de cómo podrías usar estas variables si quisieras 
+   aplicarlas a elementos específicos desde aquí: */
+
+body {
+    background-color: var(--color-fondo-sitio);
+}
+
+h2 {
+    color: var(--color-principal-rosa);
+}

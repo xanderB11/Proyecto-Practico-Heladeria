@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/images/helado.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heladeria Deliciosa</title>
+  
+</head>
+
+<body class="font-sans">
+
+<!--barra de navegacion-->  
+  <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+      <a href="/index.html" class="flex items-center space-x-3">
+        <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
+      </a>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-bold flex flex-row space-x-12 text-xl">
+          <li><a href="/index.html" class="border-b-4"
+              style="color: var(--color-principal-rosa); border-color: var(--color-principal-azul);">Inicio</a></li>
+          <li><a href="/src/pages/especialidades.html" class="hover:opacity-80"
+              style="color: var(--color-principal-rosa);">Nuestras Especialidades</a></li>
+          <li><a href="/src/pages/contactanos.html" class="hover:opacity-80"
+              style="color: var(--color-principal-rosa);">Contáctanos</a></li>
+              <li><a href="/src/pages/carrito.html" class="hover:opacity-80"
+              style="color: var(--color-principal-rosa);">Carrito</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- implementacion de la imagen de inicio-->
+  <main class="pt-28">
+    <div class="flex justify-center items-center px-4 mb-12">
+      <div class="max-w-5xl overflow-hidden rounded-3xl shadow-2xl">
+        <img src="https://i.postimg.cc/HWBZCmpH/imagen_inicio_heladeria.png" alt="bienvenida Heladeria"
+          class="w-full h-auto object-cover">
+      </div>
+    </div>
+<!-- primera tarjeta de informacion-->
+    <section class="bg-white py-16 px-6">
+      <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center gap-8">
+        <div
+          class="bg-sky-100 border border-blue-100 rounded-[2.5rem] shadow-xl flex-1 max-w-sm self-stretch flex flex-col items-center p-8 text-center">
+          <img class="h-44 w-full mb-4 object-cover rounded-2xl" src="https://i.postimg.cc/PqZjJxSV/image.png"
+            alt="Variedad de Sabores" />
+          <div class="w-full h-1 bg-white mb-6 rounded-full"></div>
+          <h5 class="mb-4 text-3xl font-bold font-serif" style="color: var(--color-principal-azul);">Variedad de Sabores
+          </h5>
+          <p class="mb-8 text-gray-500 text-lg">Descubre todos nuestros sabores artesanales.</p>
+          <a href="/src/pages/especialidades.html"
+            class="mt-auto inline-flex items-center text-white shadow-md font-bold rounded-full text-lg px-10 py-3 transition-all hover:scale-105"
+            style="background-color: var(--color-principal-azul);">
+            Ver más <span class="ms-2">→</span>
+          </a>
+        </div>
+<!--imagen central -->
+        <div class="flex-shrink-0 z-10 -my-6 md:my-0">
+          <img src="https://i.postimg.cc/ncVzS6kN/logotipo-detallado.png" alt="Logo Heladería"
+            class="h-56 md:h-72 w-auto md:w-72 object-contain drop-shadow-xl transition-transform hover:scale-110">
+        </div>
+<!--segunda tarjeta de informacion-->
+        <div
+          class="bg-pink-100 border border-pink-100 rounded-[2.5rem] shadow-xl flex-1 max-w-sm self-stretch flex flex-col items-center p-8 text-center">
+          <img class="h-44 w-full mb-4 object-cover rounded-2xl" src="https://i.postimg.cc/mDPB4w0N/presentaciones.png"
+            alt="Presentaciones" />
+          <div class="w-full h-1 bg-white mb-6 rounded-full"></div>
+          <h5 class="mb-4 text-3xl font-bold font-serif" style="color: var(--color-principal-rosa);">Nuestras
+            Especialidades</h5>
+          <p class="mb-8 text-gray-500 text-lg">Helados hechos con amor en varias presentaciones.</p>
+          <a href="/src/pages/especialidades.html"
+            class="mt-auto inline-flex items-center text-white shadow-md font-bold rounded-full text-lg px-10 py-3 transition-all hover:scale-105"
+            style="background-color: var(--color-principal-rosa);">
+            Saber más <span class="ms-2">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!--imagen final de la pagina-->
+    <section class="py-12" style="background-color: rgba(255,255,255,0.3);">
+      <div class="flex justify-center items-center px-4">
+        <img src="https://i.postimg.cc/X7sTxFZ2/heladeria_final.png" alt="Visítanos Hoy"
+          class="max-w-5xl w-full h-auto rounded-3xl shadow-2xl">
+      </div>
+    </section>
+  </main>
+<!--parte del pie de pagina-->
+  <footer class="text-white py-12 px-6 mt-20" style="background-color: var(--color-footer-rojo);">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="flex flex-col items-center md:items-start">
+        <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-20 mb-4 bg-white rounded-full p-2"
+          alt="Logo" />
+        <p class="text-sm opacity-90 max-w-xs text-center md:text-left">
+          Somos la mayor cadena especializada en helados artesanales con la mejor calidad y sabor a nivel nacional.
+        </p>
+      </div>
+      <div class="flex flex-col items-center uppercase font-bold tracking-wider">
+        <h4 class="mb-4 text-xl border-b-2 border-white pb-1">Links</h4>
+        <ul class="space-y-3 text-center md:text-left">
+          <li><a href="/index.html" class="hover:text-blue-200">Inicio</a></li>
+          <li><a href="/src/pages/especialidades.html" class="hover:text-blue-200">Nuestras Especialidades</a></li>
+          <li><a href="/src/pages/contactanos.html" class="hover:text-blue-200">Contáctanos</a></li>
+          <li><a href="/src/pages/carrito.html" class="hover:text-blue-200">Carrito</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-center md:items-start w-full">
+        <h4 class="mb-4 text-xl font-bold uppercase">Suscríbete</h4>
+        <form class="w-full max-w-xs space-y-3">
+          <input type="email" placeholder="Correo electrónico"
+            class="w-full px-4 py-2 rounded-md text-gray-800 focus:outline-none" />
+          <button
+            class="w-full bg-[#5bc0de] hover:bg-[#46a1b9] text-white font-bold py-2 px-4 rounded-md transition-colors">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="text-center mt-12 text-xs opacity-70 border-t border-white/20 pt-4">
+      © 2026 Heladería Deliciosa. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
