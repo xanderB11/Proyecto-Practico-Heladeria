@@ -40,7 +40,14 @@ function mostrarCatalogo() {
 // 2. AGREGAR AL CARRITO
 window.agregarAlCarrito = (id) => {
     const producto = productos.find(p => p.id === id);
-    carrito.push(producto);
+
+    // Revisar si ya existe el producto para aumentar cantidad
+    const existente = carrito.find(item => item.id === id);
+    if (existente) {
+        existente.cantidad = (existente.cantidad || 1) + 1;
+    } else {
+        carrito.push({ ...producto, cantidad: 1 });
+    }
     actualizarCarrito();
 };
 
@@ -50,19 +57,19 @@ function actualizarCarrito() {
     let total = 0;
 
     carrito.forEach((item, index) => {
-        total += item.precio;
+        total += item.precio * item.cantidad;
         const li = document.createElement('li');
         li.className = "flex justify-between items-center bg-blue-50 p-3 rounded-2xl border border-blue-100";
         li.innerHTML = `
             <div>
-                <p class="font-bold text-gray-700 text-sm">${item.nombre}</p>
-                <p class="text-pink-500 font-bold">$${item.precio.toFixed(2)}</p>
+                <p class="font-bold text-gray-700 text-sm">${item.nombre} x${item.cantidad}</p>
+                <p class="text-pink-500 font-bold">$${(item.precio * item.cantidad).toFixed(2)}</p>
             </div>
-            <button onclick="eliminarDelCarrito(${index})" class="text-gray-400 hover:text-red-500 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
-                </svg>
-            </button>
+            <div class="flex items-center gap-2">
+                <button onclick="eliminarDelCarrito(${index})" class="text-gray-400 hover:text-red-500">
+                    ✖
+                </button>
+            </div>
         `;
         listaCarrito.appendChild(li);
     });
