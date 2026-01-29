@@ -2,31 +2,58 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/images/helado.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto - Heladería Deliciosa</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-blue-100 font-sans">
-    <!--barra de navegacion-->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
             <a href="/index.html" class="flex items-center space-x-3">
                 <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
             </a>
+
+            <button id="menu-toggle" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-pink-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+                <span class="sr-only">Abrir menú</span>
+                <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul class="font-bold flex flex-row space-x-12 text-xl">
-                    <li><a href="/index.html" class="text-pink-400 hover:text-pink-600">Inicio</a></li>
-                    <li><a href="/src/pages/especialidades.html" class="text-pink-400 hover:text-pink-600">Nuestras Especialidades</a></li>
-                    <li><a href="/src/pages/contactanos.html" class="text-pink-400 border-b-4 border-blue-300">Contáctanos</a></li>
-                    <li><a href="/src/pages/carrito.html" class="text-pink-400 border-b-4 hover:text-pink-600">Carrito</a></li>
+                <ul
+                    class="font-bold flex flex-col md:flex-row md:space-x-8 text-lg p-4 md:p-0 mt-4 md:mt-0 bg-gray-50 md:bg-white rounded-lg md:border-0">
+                    <li><a href="/index.html" class="block py-2 text-pink-400 border-b-4 hover:text-pink-600">Inicio</a>
+                    </li>
+                    <li><a href="/src/pages/especialidades.html"
+                            class="block py-2 text-pink-400 border-blue-300">Nuestras Especialidades</a></li>
+                    <li><a href="/src/pages/pedidos.html" class="block py-2 text-pink-400 border-blue-300">Pedidos</a>
+                    </li>
+                    <li><a href="/src/pages/contactanos.html"
+                            class="block py-2 text-pink-400 hover:text-pink-600">Contáctanos</a></li>
+                    <a href="/src/pages/carrito.html"
+                        class="relative bg-emerald-100 p-2 rounded-full border border-emerald-200 hover:bg-emerald-200 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span id="carrito-helados"
+                            class="absolute -top-1 -right-1 bg-pink-400 text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center text-white shadow-sm">
+                            0
+                        </span>
+                    </a>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--cuadro principal-->
+
     <div class="pt-32 pb-10 px-4">
         <main class="max-w-5xl mx-auto bg-white rounded-[3rem] shadow-2xl overflow-hidden border-[12px] border-gray-900">
             <div class="p-8 md:p-12">
@@ -34,38 +61,30 @@
                     <h1 class="text-4xl md:text-5xl font-bold text-pink-500 mb-2">¡Queremos escucharte!</h1>
                     <p class="text-gray-500 text-lg">¿Tienes alguna duda o sugerencia? Escríbenos y te responderemos pronto</p>
                 </div>
-                <!--cuadro de informacion-->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div class="border-2 border-pink-200 rounded-3xl p-6 md:p-8 bg-white shadow-sm">
                         <form class="space-y-4">
-                            <!--cuadro nombre-->
                             <div>
                                 <label class="block text-pink-500 font-bold mb-1">Nombre Completo</label>
                                 <input type="text" placeholder="Tu nombre" class="w-full border-2 border-blue-100 rounded-xl p-3 focus:border-blue-300 outline-none transition-all">
                             </div>
-                            <!--cuadro de correo-->
                             <div>
                                 <label class="block text-pink-500 font-bold mb-1">Correo Electrónico</label>
                                 <input type="email" placeholder="ejemplo@correo.com" class="w-full border-2 border-blue-100 rounded-xl p-3 focus:border-blue-300 outline-none transition-all">
                             </div>
-                            <!--cuadro de asunto-->
                             <div>
                                 <label class="block text-pink-500 font-bold mb-1">Asunto</label>
                                 <input type="text" class="w-full border-2 border-blue-100 rounded-xl p-3 focus:border-blue-300 outline-none transition-all">
                             </div>
-                            <!--cuadro de mensaje-->
                             <div>
                                 <label class="block text-pink-500 font-bold mb-1">Mensaje</label>
                                 <textarea rows="3" class="w-full border-2 border-blue-100 rounded-xl p-3 focus:border-blue-300 outline-none transition-all"></textarea>
                             </div>
-                            <!--boton de enviar-->
                             <button class="w-full bg-pink-500 hover:bg-pink-600 text-white font-extrabold py-4 rounded-full shadow-lg transform hover:scale-[1.02] transition-all uppercase tracking-wider">
                                 Enviar Mensaje
                             </button>
                         </form>
                     </div>
-                    <!--cuadro de contacto-->
-                    
                     <div class="flex flex-col gap-6">
                         <div class="bg-sky-400 rounded-3xl p-8 text-white shadow-md">
                             <h3 class="text-2xl font-bold mb-6">Datos de Contacto</h3>
@@ -89,7 +108,7 @@
             </div>
         </main>
     </div>
-    <!--parte final de la pagina -->
+
     <footer class="text-white py-12 px-6 mt-20 bg-pink-600">
         <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="flex flex-col items-center md:items-start">
@@ -120,6 +139,16 @@
         </div>
     </footer>
 
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarDefault = document.getElementById('navbar-default');
+
+        menuToggle.addEventListener('click', () => {
+            navbarDefault.classList.toggle('hidden');
+        });
+    </script>
+
     <script type="module" src="/src/js/main.js"></script>
 </body>
+
 </html>

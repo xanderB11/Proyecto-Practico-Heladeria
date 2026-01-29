@@ -15,13 +15,40 @@
             <a href="/index.html" class="flex items-center space-x-3">
                 <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
             </a>
+
+            <button id="menu-toggle" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-pink-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+                <span class="sr-only">Abrir menú</span>
+                <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul class="font-bold flex flex-row space-x-12 text-xl">
-                    <li><a href="/index.html" class="text-pink-400 border-b-4  hover:text-pink-600">Inicio</a></li>
-                    <li><a href="/src/pages/especialidades.html" class="text-pink-400  border-blue-300">Nuestras
-                            Especialidades</a></li>
-                    <li><a href="/src/pages/contactanos.html" class="text-pink-400 hover:text-pink-600">Contáctanos</a></li>
-                    <li><a href="/src/pages/carrito.html" class="text-pink-400 hover:text-pink-600">Carrito</a></li>
+                <ul
+                    class="font-bold flex flex-col md:flex-row md:space-x-8 text-lg p-4 md:p-0 mt-4 md:mt-0 bg-gray-50 md:bg-white rounded-lg md:border-0">
+                    <li><a href="/index.html" class="block py-2 text-pink-400 border-b-4 hover:text-pink-600">Inicio</a>
+                    </li>
+                    <li><a href="/src/pages/especialidades.html"
+                            class="block py-2 text-pink-400 border-blue-300">Nuestras Especialidades</a></li>
+                    <li><a href="/src/pages/pedidos.html" class="block py-2 text-pink-400 border-blue-300">Pedidos</a>
+                    </li>
+                    <li><a href="/src/pages/contactanos.html"
+                            class="block py-2 text-pink-400 hover:text-pink-600">Contáctanos</a></li>
+                    <a href="/src/pages/carrito.html"
+                        class="relative bg-emerald-100 p-2 rounded-full border border-emerald-200 hover:bg-emerald-200 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span id="carrito-helados"
+                            class="absolute -top-1 -right-1 bg-pink-400 text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center text-white shadow-sm">
+                            0
+                        </span>
+                    </a>
                 </ul>
             </div>
         </div>
@@ -47,7 +74,7 @@
                                 <h3 class="text-xl font-bold uppercase leading-none">Cono Mix Simple</h3>
                                 <p class="text-sm font-medium mt-1">Un sabor de helado, crema y queso.</p>
                             </div>
-                            <span class="text-2xl font-black text-pink-600">$1,50</span>
+                            <span class="text-2xl font-black text-pink-600">$1,75</span>
                         </div>
                         <div class="flex justify-between items-start border-b border-white/20 pb-2">
                             <div class="text-left">
@@ -61,14 +88,14 @@
                                 <h3 class="text-xl font-bold uppercase leading-none">Cono Gelato</h3>
                                 <p class="text-sm font-medium mt-1">Un sabor de helado.</p>
                             </div>
-                            <span class="text-2xl font-black text-pink-600">$0,99</span>
+                            <span class="text-2xl font-black text-pink-600">$1,00</span>
                         </div>
                         <div class="flex justify-between items-start border-b border-white/20 pb-2">
                             <div class="text-left">
                                 <h3 class="text-xl font-bold uppercase leading-none">Cono Gelato Doble</h3>
                                 <p class="text-sm font-medium mt-1">Dos sabores de helado.</p>
                             </div>
-                            <span class="text-2xl font-black text-pink-600">$0,99</span>
+                            <span class="text-2xl font-black text-pink-600">$1,50</span>
                         </div>
                     </div>
                 </div>
@@ -114,7 +141,7 @@
                                 </h3>
                                 <p class="text-sm font-medium mt-1">Dos sabores de helado.</p>
                             </div>
-                            <span class="text-2xl font-black text-white">$2,22</span>
+                            <span class="text-2xl font-black text-white">$2,00</span>
                         </div>
                     </div>
                 </div>
@@ -135,7 +162,7 @@
                                 <h3 class="text-xl font-bold uppercase leading-none">Frutillas con Crema</h3>
                                 <p class="text-sm font-medium mt-1">Frutillas con crema y zarzamora.</p>
                             </div>
-                            <span class="text-2xl font-black text-pink-600">$1,87</span>
+                            <span class="text-2xl font-black text-pink-600">$2,00</span>
                         </div>
                         <div class="flex justify-between items-start border-b border-white/20 pb-2">
                             <div class="text-left">
@@ -154,18 +181,27 @@
                                     crema y queso.</p>
                             </div>
                             <div class="text-right">
-                                <span class="block text-2xl font-black text-pink-600">$3,99</span>
+                                <span class="block text-2xl font-black text-pink-600">$5,00</span>
                                 
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start border-b border-white/20 pb-2">
+                            <div class="text-left">
+                                <h3 class="text-xl font-bold uppercase leading-none">Frutillas Choco-Mix</h3>
+                                <p class="text-sm font-medium mt-1">Frutillas con crema, un sabor de helado y salsa de chocolate.</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-2xl font-black text-pink-600">$3,25</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--agrego de chips-->
     </section>
+
     <div class="mt-10">
-        <h3 class="text-3xl font-black text-pink-600 uppercase italic mb-6 tracking-tighter  text-center">Nuestros Sabores
+        <h3 class="text-3xl font-black text-pink-600 uppercase italic mb-6 tracking-tighter text-center">Nuestros Sabores
         </h3>
         <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             <span
@@ -198,8 +234,12 @@
             </span>
         </div>
     </div>
+    <div class="mt-12 text-center">
+        <a href="/src/pages/pedidos.html" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-black text-2xl uppercase italic py-4 px-10 rounded-full shadow-2xl transform transition hover:scale-105 tracking-wider">
+            ¡Haz tu pedido aquí!
+        </a>
+    </div>
 
-    <!--parte final-->
     <footer class="bg-[#e4314d] text-white py-12 px-6 mt-20">
         <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="flex flex-col items-center md:items-start">
@@ -233,6 +273,15 @@
             © 2026 Heladería Deliciosa. Todos los derechos reservados.
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarDefault = document.getElementById('navbar-default');
+
+        menuToggle.addEventListener('click', () => {
+            navbarDefault.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>

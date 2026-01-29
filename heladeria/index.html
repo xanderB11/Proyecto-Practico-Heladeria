@@ -13,24 +13,48 @@
 
 <!--barra de navegacion-->  
   <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-      <a href="/index.html" class="flex items-center space-x-3">
-        <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
-      </a>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-bold flex flex-row space-x-12 text-xl">
-          <li><a href="/index.html" class="border-b-4"
-              style="color: var(--color-principal-rosa); border-color: var(--color-principal-azul);">Inicio</a></li>
-          <li><a href="/src/pages/especialidades.html" class="hover:opacity-80"
-              style="color: var(--color-principal-rosa);">Nuestras Especialidades</a></li>
-          <li><a href="/src/pages/contactanos.html" class="hover:opacity-80"
-              style="color: var(--color-principal-rosa);">Contáctanos</a></li>
-              <li><a href="/src/pages/carrito.html" class="hover:opacity-80"
-              style="color: var(--color-principal-rosa);">Carrito</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+            <a href="/index.html" class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
+            </a>
+
+            <button id="menu-toggle" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-pink-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+                <span class="sr-only">Abrir menú</span>
+                <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-bold flex flex-col md:flex-row md:space-x-8 text-lg p-4 md:p-0 mt-4 md:mt-0 bg-gray-50 md:bg-white rounded-lg md:border-0">
+                    <li><a href="/index.html" class="block py-2 text-pink-400 border-b-4 hover:text-pink-600">Inicio</a>
+                    </li>
+                    <li><a href="/src/pages/especialidades.html"
+                            class="block py-2 text-pink-400 border-blue-300">Nuestras Especialidades</a></li>
+                    <li><a href="/src/pages/pedidos.html" class="block py-2 text-pink-400 border-blue-300">Pedidos</a>
+                    </li>
+                    <li><a href="/src/pages/contactanos.html"
+                            class="block py-2 text-pink-400 hover:text-pink-600">Contáctanos</a></li>
+                    <a href="/src/pages/carrito.html"
+                        class="relative bg-emerald-100 p-2 rounded-full border border-emerald-200 hover:bg-emerald-200 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <span id="carrito-helados"
+                            class="absolute -top-1 -right-1 bg-pink-400 text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center text-white shadow-sm">
+                            0
+                        </span>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
 <!-- implementacion de la imagen de inicio-->
   <main class="pt-28">
     <div class="flex justify-center items-center px-4 mb-12">
@@ -40,7 +64,7 @@
       </div>
     </div>
 <!-- primera tarjeta de informacion-->
-    <section class="bg-white py-16 px-6">
+    <section class="bg-blue-300 py-16 px-6">
       <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center gap-8">
         <div
           class="bg-sky-100 border border-blue-100 rounded-[2.5rem] shadow-xl flex-1 max-w-sm self-stretch flex flex-col items-center p-8 text-center">

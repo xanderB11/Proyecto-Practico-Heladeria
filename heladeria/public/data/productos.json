@@ -1,0 +1,89 @@
+[
+  {
+    "categoria": "Conos",
+    "productos": [
+      {
+        "nombre": "Cono Mix Simple",
+        "precio": 1.75,
+        "descripcion": "Un sabor de helado, crema y queso.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Cono Mix Doble",
+        "precio": 2.25,
+        "descripcion": "Dos sabores de helado, crema y queso.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Cono Gelato",
+        "precio": 1.00,
+        "descripcion": "Un sabor de helado.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Cono Gelato Doble",
+        "precio": 1.50,
+        "descripcion": "Dos sabores de helado.",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "categoria": "Tulipanes",
+    "productos": [
+      {
+        "nombre": "Tulipán Mix Simple",
+        "precio": 1.80,
+        "descripcion": "Un sabor de helado, crema y queso.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Tulipán Mix Doble",
+        "precio": 3.05,
+        "descripcion": "Dos sabores de helado, crema y queso.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Tulipán Mix Triple",
+        "precio": 5.00,
+        "descripcion": "Tres sabores de helado, crema y queso.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Tulipán Gelato Doble",
+        "precio": 2.00,
+        "descripcion": "Dos sabores de helado.",
+        "imagen": ""
+      }
+    ]
+  },
+  {
+    "categoria": "Frutillas Mix",
+    "productos": [
+      {
+        "nombre": "Frutillas con Crema",
+        "precio": 2.00,
+        "descripcion": "Frutillas con crema y zarzamora.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Frutillas Mix",
+        "precio": 3.50,
+        "descripcion": "Frutillas, un sabor de helado, crema y queso.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Ensalada de Frutas",
+        "precio": 5.00,
+        "descripcion": "Banana, sandía, piña, papaya, dos sabores de helado, crema y queso.",
+        "imagen": ""
+      },
+      {
+        "nombre": "Frutillas Choco-Mix",
+        "precio": 3.25,
+        "descripcion": "Frutillas con crema, un sabor de helado y salsa de chocolate.",
+        "imagen": ""
+      }
+    ]
+  }
+]
