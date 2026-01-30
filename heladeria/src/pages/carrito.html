@@ -13,32 +13,31 @@
 
     <!-- NAVBAR (MISMO) -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-            <a href="/index.html" class="flex items-center space-x-3">
-                <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
-            </a>
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+        <a href="/index.html" class="flex items-center space-x-3">
+            <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
+        </a>
 
-            <button id="menu-toggle" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-pink-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
-                <span class="sr-only">Abrir menú</span>
-                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-            </button>
+        <button id="menu-toggle" data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-pink-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none"
+            aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Abrir menú</span>
+            <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+        </button>
 
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul
-                    class="font-bold flex flex-col md:flex-row md:space-x-8 text-lg p-4 md:p-0 mt-4 md:mt-0 bg-gray-50 md:bg-white rounded-lg md:border-0">
-                    <li><a href="/index.html" class="block py-2 text-pink-400 hover:text-pink-600">Inicio</a></li>
-                    <li><a href="/src/pages/especialidades.html"
-                            class="block py-2 text-pink-400">Nuestras Especialidades</a></li>
-                    <li><a href="/src/pages/pedidos.html" class="block py-2 text-pink-400">Pedidos</a></li>
-                    <li><a href="/src/pages/contactanos.html"
-                            class="block py-2 text-pink-400 hover:text-pink-600">Contáctanos</a></li>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-bold flex flex-col md:flex-row md:space-x-8 text-lg p-4 md:p-0 mt-4 md:mt-0 bg-gray-50 md:bg-white rounded-lg md:border-0">
+                <li><a href="/index.html" class="block py-2 text-pink-400 hover:text-pink-600">Inicio</a></li>
+                <li><a href="/src/pages/especialidades.html" class="block py-2 text-pink-400">Nuestras Especialidades</a></li>
+                <li><a href="/src/pages/pedidos.html" class="block py-2 text-pink-400">Pedidos</a></li>
+                <li><a href="/src/pages/contactanos.html" class="block py-2 text-pink-400 hover:text-pink-600">Contáctanos</a></li>
 
+                <li class="flex items-center">
                     <a href="/src/pages/carrito.html"
-                        class="relative bg-emerald-100 p-2 rounded-full border border-emerald-200 hover:bg-emerald-200 transition">
+                        class="relative bg-emerald-100 p-2 rounded-full border border-emerald-200 hover:bg-emerald-200 transition inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,10 +48,11 @@
                             0
                         </span>
                     </a>
-                </ul>
-            </div>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- CONTENIDO CARRITO -->
     <div class="pt-32 pb-10 px-4">
