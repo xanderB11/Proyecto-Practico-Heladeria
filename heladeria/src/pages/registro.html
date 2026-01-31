@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/helado.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Heladería Deliciosa</title>
+
+</head>
+
+<body class="bg-blue-100 font-sans">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+            <a href="/index.html" class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-16" alt="logo Heladeria" />
+            </a>
+
+            <button id="menu-toggle" data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-pink-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Abrir menú</span>
+                <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-bold flex flex-col md:flex-row md:space-x-8 text-lg p-4 md:p-0 mt-4 md:mt-0 bg-gray-50 md:bg-white rounded-lg md:border-0">
+                    <li><a href="/index.html" class="block py-2 text-pink-400 hover:text-pink-600">Inicio</a></li>
+                    <li><a href="/src/pages/especialidades.html"
+                            class="block py-2 text-pink-400 border-blue-300">Nuestras Especialidades</a></li>
+                    <li><a href="/src/pages/pedidos.html" class="block py-2 text-pink-400 border-blue-300">Pedidos</a>
+                    </li>
+                    <li><a href="/src/pages/registro.html"
+                            class="block py-2 text-pink-400 hover:text-pink-600 border-blue-300 border-b-4">Registro</a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/src/pages/carrito.html"
+                            class="relative bg-emerald-100 p-2 rounded-full border border-emerald-200 hover:bg-emerald-200 transition inline-block">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            </svg>
+                            <span id="carrito-helados"
+                                class="absolute -top-1 -right-1 bg-pink-400 text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center text-white shadow-sm">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-10 px-4">
+        <main
+            class="max-w-6xl mx-auto bg-white rounded-[3rem] shadow-2xl overflow-hidden border-[12px] border-gray-900">
+            <div class="p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <h1 class="text-4xl md:text-5xl font-bold text-pink-500 mb-2">Registro</h1>
+                    <p class="text-gray-500 text-lg">Únete a nuestra comunidad y recibe promociones exclusivas</p>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-10 items-start justify-center">
+                    <div class="flex-1 w-full border-2 border-pink-200 rounded-3xl p-6 md:p-8 bg-white shadow-sm">
+                        <form id="formulario" onsubmit="event.preventDefault();" class="space-y-4">
+                            <div>
+                                <label class="block text-pink-500 font-bold mb-1">Nombre Completo</label>
+                                <input type="text" id="username"
+                                    class="w-full border-2 border-blue-100 rounded-xl p-3 outline-none transition-all focus:border-cyan-400">
+                                <span id="error-username" class="text-red-500 text-[10px] hidden italic">Debe tener
+                                    entre 3 y 16 letras.</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-pink-500 font-bold mb-1">Correo Electrónico</label>
+                                <input type="email" id="email"
+                                    class="w-full border-2 border-blue-100 rounded-xl p-3 outline-none transition-all focus:border-cyan-400">
+                                <span id="error-email" class="text-red-500 text-[10px] hidden italic">Email no
+                                    válido.</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-pink-500 font-bold mb-1">Celular</label>
+                                    <input type="text" id="telefono" maxlength="10" placeholder="0984490507"
+                                        class="w-full border-2 border-blue-100 rounded-xl p-3 outline-none transition-all focus:border-cyan-400">
+                                    <span id="error-telefono" class="text-red-500 text-[10px] hidden italic">10 dígitos
+                                        requeridos.</span>
+                                </div>
+                                <div>
+                                    <label class="block text-pink-500 font-bold mb-1">Edad</label>
+                                    <input type="number" id="edad" placeholder="18"
+                                        class="w-full border-2 border-blue-100 rounded-xl p-3 outline-none transition-all focus:border-cyan-400">
+                                    <span id="error-edad" class="text-red-500 text-[10px] hidden italic">Mínimo 18
+                                        años.</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-pink-500 font-bold mb-1">Cédula</label>
+                                <input type="text" id="cedula" maxlength="10" placeholder="1712345678"
+                                    class="w-full border-2 border-blue-100 rounded-xl p-3 outline-none transition-all focus:border-cyan-400">
+                                <span id="error-cedula" class="text-red-500 text-[10px] hidden italic">10 dígitos
+                                    requeridos.</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-pink-500 font-bold mb-1">Contraseña</label>
+                                <input type="password" id="password"
+                                    class="w-full border-2 border-blue-100 rounded-xl p-3 outline-none transition-all focus:border-cyan-400">
+                                <span id="error-password" class="text-red-500 text-[10px] hidden italic">Mínimo 8
+                                    caracteres, 1 letra y 1 número.</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-pink-500 font-bold mb-1">Confirmar Contraseña</label>
+                                <input type="password" id="confirmPassword"
+                                    class="w-full border-2 border-blue-100 rounded-xl p-3 outline-none transition-all focus:border-cyan-400">
+                                <span id="error-confirmPassword" class="text-red-500 text-[10px] hidden italic">Las
+                                    contraseñas no coinciden.</span>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 rounded-lg transition-colors uppercase tracking-[0.2em] shadow-lg mt-4">
+                                Finalizar Registro
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="bg-sky-400 rounded-3xl p-8 text-white shadow-md w-fit mx-auto md:mx-0 self-center">
+                        <h3 class="text-2xl font-bold mb-6 border-b-2 border-white/30 pb-2">Atención al Cliente</h3>
+                        <div class="space-y-5 italic">
+                            <div class="flex items-center gap-3"><span>📍</span>
+                                <p>Quito, Ecuador - Av. Principal</p>
+                            </div>
+                            <div class="flex items-center gap-3"><span>📞</span>
+                                <p>+593 99 999 9999</p>
+                            </div>
+                            <div class="flex items-center gap-3"><span>✉️</span>
+                                <p>hola@heladeriadeliciosa.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-[#e4314d] text-white py-12 px-6 mt-20">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="https://i.postimg.cc/XqQv7Jsf/icono-heladeria.png" class="h-20 mb-4 bg-white rounded-full p-2"
+                    alt="Logo" />
+                <p class="text-sm opacity-90 max-w-xs text-center md:text-left">Somos la mayor cadena especializada en
+                    helados artesanales con la mejor calidad y sabor a nivel nacional.</p>
+            </div>
+            <div class="flex flex-col items-center uppercase font-bold tracking-wider">
+                <h4 class="mb-4 text-xl border-b-2 border-white pb-1">Links</h4>
+                <ul class="space-y-3 text-center md:text-left">
+                    <li><a href="/index.html" class="hover:text-blue-200">Inicio</a></li>
+                    <li><a href="/src/pages/especialidades.html" class="hover:text-blue-200">Nuestras Especialidades</a>
+                    </li>
+                    <li><a href="/src/pages/pedidos.html" class="hover:text-blue-200">Pedido</a></li>
+<li><a href="/src/pages/resgistro.html" class="hover:text-blue-200">Registro</a></li>                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-start w-full">
+                <h4 class="mb-4 text-xl font-bold uppercase">Suscríbete</h4>
+                <a class="w-full bg-[#5bc0de] hover:bg-[#46a1b9] text-white font-bold py-2 px-4 rounded-md transition-colors"
+                    href="/src/pages/Registro.html">
+                    <button
+                        class="w-full bg-[#5bc0de] hover:bg-[#46a1b9] text-white font-bold py-2 px-4 rounded-md transition-colors text-3xl">Suscribirme</button>
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-xs opacity-70 border-t border-white/20 pt-4">© 2026 Heladería Deliciosa.
+            Todos los derechos reservados.</div>
+    </footer>
+
+    <script type="module" src="/src/js/contactanos.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarDefault = document.getElementById('navbar-default');
+        menuToggle.addEventListener('click', () => { navbarDefault.classList.toggle('hidden'); });
+    </script>
+    <script type="module" src="/src/js/contactanos.js"></script>
+</body>
+
+</html>
